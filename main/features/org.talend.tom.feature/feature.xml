@@ -2,7 +2,7 @@
 <feature
       id="org.talend.tom.feature"
       label="Tom workbench"
-      version="7.3.2.qualifier"
+      version="7.3.1.qualifier"
       provider-name=".Talend SA.">
 
    <description url="http://www.example.com/description">

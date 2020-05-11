@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Webservice Jars
 Bundle-SymbolicName: org.talend.mdm.ws.jars;singleton:=true
-Bundle-Version: 7.3.2.qualifier
+Bundle-Version: 7.3.1.qualifier
 Fragment-Host: org.talend.mdm.ws
 Automatic-Module-Name: org.talend.mdm.ws.jars
 Bundle-ClassPath: lib/cxf-core-3.3.4.jar,
