@@ -23,7 +23,6 @@ public class MDMWorbenchPlugin extends AbstractUIPlugin {
 
     public static final String ID = "org.talend.mdm.workbench";//$NON-NLS-1$
 
-    // test push
     // The shared instance.
     private static MDMWorbenchPlugin plugin;
 
