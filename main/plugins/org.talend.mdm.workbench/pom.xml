@@ -67,7 +67,7 @@
                     <!-- copy xercesImpl  -->
                     <execution>
                         <id>copy-xercesImpl</id>
-                        <phase>package</phase>
+                        <phase>generate-sources</phase>
                         <goals>
                             <goal>copy</goal>
                         </goals>
