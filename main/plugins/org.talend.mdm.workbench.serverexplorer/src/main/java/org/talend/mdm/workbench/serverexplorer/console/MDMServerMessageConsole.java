@@ -336,6 +336,7 @@ public abstract class MDMServerMessageConsole extends MessageConsole implements 
 
     private HttpResponse executeByHttpget(String url, String userName, String password) {
         HttpGet httpGet = new HttpGet(url);
+        HttpClientUtil.wrapHttpRequest(httpGet, userName, password);
         HttpClientUtil.addStudioToken(httpGet, serverDef.getUser());
         DefaultHttpClient httpClient = createHttpClient();
 
