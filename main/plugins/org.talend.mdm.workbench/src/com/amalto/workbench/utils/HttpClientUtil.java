@@ -99,7 +99,7 @@ public class HttpClientUtil {
         return new DefaultHttpClient(cm, params);
     }
 
-    private static void wrapHttpRequest(HttpUriRequest httpRequest, String username, String password) {
+    public static void wrapHttpRequest(HttpUriRequest httpRequest, String username, String password) {
         try {
             byte[] authBytes = (username + ":" + password).getBytes("UTF-8");
             String authString = Base64.getEncoder().encodeToString(authBytes);
