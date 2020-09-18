@@ -35,17 +35,6 @@
 
   <PARAMETERS>
 
-	<PARAMETER NAME="SERVERVERSION" FIELD="CLOSED_LIST" NUM_ROW="12" REQUIRED="true" REPOSITORY_VALUE="MDM_VERSION">
-		<ITEMS DEFAULT="SERVER_6_0">
-			<ITEM NAME="SERVER_6_0" VALUE="s60" />
-			<ITEM NAME="SERVER_5_6" VALUE="s56" />
-		</ITEMS>
-	</PARAMETER>
-	
-	<PARAMETER NAME="NOTE" FIELD="LABEL" NUM_ROW="12" SHOW_IF="SERVERVERSION == 's56'">
-    	<DEFAULT>suggest to use 6.0 url</DEFAULT>
-    </PARAMETER>
-
     <PARAMETER NAME="MDMURL" FIELD="TEXT" NUM_ROW="20"
 		REQUIRED="true">
 		<DEFAULT>"http://localhost:8180/talendmdm/services/soap"</DEFAULT>
@@ -94,7 +83,7 @@
       <IMPORT NAME="SOAP-JAF" MODULE="activation.jar" MVN="mvn:org.talend.libraries/activation/6.0.0"  UrlPath="platform:/plugin/org.talend.libraries.apache.axis2/lib/activation.jar" BundleID="" REQUIRED="true" />
       
       <IMPORT NAME="SOAP-httpclient" MODULE="commons-httpclient.jar" MVN="mvn:org.talend.libraries/commons-httpclient/6.0.0"  UrlPath="platform:/plugin/org.talend.libraries.apache.http/lib/commons-httpclient.jar" REQUIRED="true" />
-      <IMPORT NAME="mdm_transaction.jar" MODULE="mdm_transaction-1.2.0.jar" MVN="mvn:org.talend.libraries/mdm_transaction/1.2.0"  REQUIRED="true" />
+      <IMPORT NAME="mdm_transaction-1.2.0.jar" MODULE="mdm_transaction-1.2.0.jar" MVN="mvn:org.talend.components.lib/mdm_transaction/1.2.0"  REQUIRED="true" />
       <IMPORT NAME="SOAP-codec" MODULE="commons-codec-1.6.jar" MVN="mvn:org.talend.libraries/commons-codec-1.6/6.0.0"  UrlPath="platform:/plugin/org.talend.libraries.apache.common/lib/commons-codec-1.6.jar" REQUIRED="true" />
       
       <!-- Jars for cxf begin -->
