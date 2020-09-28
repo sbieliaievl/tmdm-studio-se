@@ -1,3 +1,16 @@
+// ============================================================================
+//
+// Copyright (C) 2006-2020 Talend Inc. - www.talend.com
+//
+// This source code is available under agreement available at
+// %InstallDIR%\features\org.talend.rcp.branding.%PRODUCTNAME%\%PRODUCTNAME%license.txt
+//
+// You should have received a copy of the agreement
+// along with this program; if not, write to Talend SA
+// 9 rue Pages 92150 Suresnes, France
+//
+// ============================================================================
+
 package org.talend.mdm.repository.core.service;
 
 import static org.junit.Assert.*;
@@ -33,10 +46,11 @@ import org.talend.mdm.repository.utils.RepositoryResourceUtil;
 import org.talend.mdm.repository.utils.UIUtil;
 
 import com.amalto.workbench.exadapter.ExAdapterManager;
+import com.thoughtworks.xstream.converters.reflection.ReflectionProvider;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest({ ModelImpactAnalyseService.class, CommandManager.class, ExAdapterManager.class, RepositoryResourceUtil.class,
-        ConsistencyService.class, UIUtil.class, ModelImpactAnalyseService.class })
+@PrepareForTest({ ModelImpactAnalyseService.class, CommandManager.class, ReflectionProvider.class, ExAdapterManager.class,
+        RepositoryResourceUtil.class, ConsistencyService.class, UIUtil.class, ModelImpactAnalyseService.class })
 @PowerMockIgnore({ "org.talend.core.runtime.CoreRuntimePlugin", "org.eclipse.core.runtime.*", "org.eclipse.osgi.util.*" })
 public class DeployServiceTest {
 
