@@ -9,4 +9,5 @@
   </parent>
   <artifactId>org.talend.mdm.ws.jars</artifactId>
   <packaging>eclipse-plugin</packaging>
+  
 </project>
