@@ -19,9 +19,7 @@ public class ExtensibleEditorContent {
     private String maskedContent;
 
     public ExtensibleEditorContent(String content) {
-
-        if (content != null)
-            this.content = content;
+        setContent(content);
     }
 
     public String getContent() {
@@ -37,6 +35,7 @@ public class ExtensibleEditorContent {
             this.content = "";//$NON-NLS-1$
             this.maskedContent = "";
         } else {
+            this.content = newContent;
             if (PasswordTagUtil.isPasswordHidden(newContent)) {
                 if (PasswordTagUtil.isContentChanged(newContent, maskedContent)) {
                     String[] splitNewContent = PasswordTagUtil.splitByPasswordTag(newContent);
@@ -53,7 +52,6 @@ public class ExtensibleEditorContent {
                     this.maskedContent = PasswordTagUtil.hidePassword(content);
                 }
             } else {
-                this.content = newContent;
                 this.maskedContent = PasswordTagUtil.hidePassword(content);
             }
         }
