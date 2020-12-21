@@ -6,7 +6,6 @@
 	<classpathentry exported="true" kind="lib" path="META-INF/lib/ezmorph-1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="META-INF/lib/json-20090211.jar"/>
 	<classpathentry exported="true" kind="lib" path="META-INF/lib/jakarta-oro-2.0.8.jar"/>
-	<classpathentry exported="true" kind="lib" path="META-INF/lib/axis.jar"/>
 	<classpathentry exported="true" kind="lib" path="META-INF/lib/z.commons-lang-2.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="META-INF/lib/resolver.jar"/>
 	<classpathentry exported="true" kind="lib" path="META-INF/lib/serializer.jar"/>
