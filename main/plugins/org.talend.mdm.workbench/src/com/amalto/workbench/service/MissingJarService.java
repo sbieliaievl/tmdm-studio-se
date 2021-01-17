@@ -72,17 +72,32 @@ public class MissingJarService {
 
     private boolean needRestart = false;
 
-    private boolean isOkForFirstTime = true;
+    /**
+     * <font color='red'><b>Using isOkForFirstTime() method</b></font>
+     */
+    @Deprecated
+    private Boolean isOkForFirstTime = null;
 
-    public void initialCheck() {
-        isOkForFirstTime = getMissingJarList() == null;
+    private final Object isOkForFirstTimeLock = new Object();
+
+    public Boolean isOkForFirstTime() {
+        if (isOkForFirstTime == null) {
+            synchronized (isOkForFirstTimeLock) {
+                if (isOkForFirstTime == null) {
+                    isOkForFirstTime = getMissingJarList() == null;
+                }
+            }
+        }
+        return isOkForFirstTime;
     }
 
     public boolean checkMissingJar(boolean showUI) {
         if (getMissingJarList() == null) {
-            if (!isOkForFirstTime) {
+            if (!isOkForFirstTime()) {
                 needRestart = true;
-                isOkForFirstTime = true;
+                synchronized (isOkForFirstTimeLock) {
+                    isOkForFirstTime = true;
+                }
             }
             if (needRestart) {
                 showRestartConfirmDialog();

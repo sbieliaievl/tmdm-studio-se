@@ -555,6 +555,8 @@ public class Messages extends NLS {
 
     public static String Cancel;
 
+    public static String CheckMissingJarLoginTask_jobName;
+
     public static String Close;
 
     public static String ConceptComposite_Abstract;

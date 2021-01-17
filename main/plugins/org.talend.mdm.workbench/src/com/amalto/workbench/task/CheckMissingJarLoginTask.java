@@ -15,9 +15,13 @@ package com.amalto.workbench.task;
 import java.lang.reflect.InvocationTargetException;
 
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.talend.login.AbstractLoginTask;
 
+import com.amalto.workbench.i18n.Messages;
 import com.amalto.workbench.service.MissingJarService;
 
 /**
@@ -32,7 +36,15 @@ public class CheckMissingJarLoginTask extends AbstractLoginTask implements IRunn
      * @see org.eclipse.jface.operation.IRunnableWithProgress#run(org.eclipse.core.runtime.IProgressMonitor)
      */
     public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-        MissingJarService.getInstance().initialCheck();
+        Job job = new Job(Messages.CheckMissingJarLoginTask_jobName) {
+
+            @Override
+            protected IStatus run(IProgressMonitor monitor) {
+                MissingJarService.getInstance().isOkForFirstTime();
+                return Status.OK_STATUS;
+            }
+        };
+        job.schedule();
     }
 
 }
