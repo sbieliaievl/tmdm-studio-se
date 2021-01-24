@@ -23,10 +23,11 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.apache.axis.utils.StringUtils;
 import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.MessageDialog;
@@ -52,6 +53,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.talend.core.runtime.util.SharedStudioUtils;
 import org.talend.mdm.commmon.util.workbench.ZipToFile;
 
 import com.amalto.workbench.MDMWorbenchPlugin;
@@ -357,7 +359,8 @@ public class ImportExchangeOptionsDialog extends Dialog implements SelectionList
             if (null == stream) {
                 throw new RuntimeException("cannot get the content stream"); //$NON-NLS-1$
             }
-            String downloadFolder = System.getProperty("user.dir") + File.separator + (export ? "temp" : "xsdTemp");//$NON-NLS-1$//$NON-NLS-2$//$NON-NLS-3$
+            IPath parentPath = SharedStudioUtils.getTempFolderPath().removeLastSegments(1);
+            String downloadFolder = parentPath.toPortableString() + File.separator + (export ? "temp" : "xsdTemp");//$NON-NLS-1$//$NON-NLS-2$//$NON-NLS-3$
             String subFolderForTmp = downloadFolder + File.separator + "tmp" + System.currentTimeMillis();//$NON-NLS-1$
             File tempFile = new File(subFolderForTmp + File.separator + "tmp" + System.currentTimeMillis());//$NON-NLS-1$
 
