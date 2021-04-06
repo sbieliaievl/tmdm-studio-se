@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Web Service Object for CE
 Bundle-SymbolicName: org.talend.mdm.ws;singleton:=true
-Bundle-Version: 7.4.1.qualifier
+Bundle-Version: 7.4.1.M8
 Require-Bundle: javax.wsdl;bundle-version="1.6.2",
  javax.activation,
  org.eclipse.core.runtime
