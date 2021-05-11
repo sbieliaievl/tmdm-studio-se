@@ -421,6 +421,13 @@ public class Util {
                 context.put(BindingProvider.USERNAME_PROPERTY, username);
                 context.put(BindingProvider.PASSWORD_PROPERTY, password);
 
+                String ct = System.getProperty("com.sun.xml.ws.connect.timeout", String.valueOf(3 * 60 * 1000));
+                String rt = System.getProperty("com.sun.xml.ws.request.timeout", String.valueOf(30 * 60 * 1000));
+                context.put("com.sun.xml.ws.connect.timeout", Integer.valueOf(ct));
+                context.put("com.sun.xml.ws.request.timeout", Integer.valueOf(rt));
+                context.put("javax.xml.ws.client.connectionTimeout", Integer.valueOf(ct));
+                context.put("javax.xml.ws.client.receiveTimeout", Integer.valueOf(rt));
+                
                 IMDMWebServiceHook wsHook = getWebServiceHook();
                 if (wsHook != null) {
                     wsHook.preRequestSendingHook(stub.getRequestContext(), username);
