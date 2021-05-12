@@ -246,9 +246,9 @@
                     BundleID=""
                     />
                 <IMPORT
-                    NAME="istack-commons-runtime-3.0.8"
-                    MODULE="istack-commons-runtime-3.0.8.jar"
-                    MVN="mvn:com.sun.istack/istack-commons-runtime/3.0.8"
+                    NAME="istack-commons-runtime-3.0.11"
+                    MODULE="istack-commons-runtime-3.0.11.jar"
+                    MVN="mvn:com.sun.istack/istack-commons-runtime/3.0.11"
                     REQUIRED="true"
                     BundleID=""
                     />
