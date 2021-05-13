@@ -104,7 +104,7 @@
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="istack-commons-runtime-3.0.8.jar" mvn_uri="mvn:com.sun.istack/istack-commons-runtime/3.0.8" 
+              name="istack-commons-runtime-3.0.11.jar" mvn_uri="mvn:com.sun.istack/istack-commons-runtime/3.0.11" 
               required="true">
         </libraryNeeded>
         <libraryNeeded
