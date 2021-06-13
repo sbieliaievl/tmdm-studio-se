@@ -22,7 +22,7 @@
               <goal>copy-resources</goal>
             </goals>
             <configuration>
-              <outputDirectory>${basedir}/lib</outputDirectory>
+              <outputDirectory>${basedir}/META-INF/lib</outputDirectory>
               <resources>          
                 <resource>
                   <directory>${basedir}/../org.talend.repository.test/META-INF/libs</directory>
