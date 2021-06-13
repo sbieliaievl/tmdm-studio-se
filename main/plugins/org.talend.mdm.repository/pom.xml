@@ -10,23 +10,32 @@
   <artifactId>org.talend.mdm.repository</artifactId>
   <packaging>eclipse-plugin</packaging>
   <build>
-  <plugins>
-  <plugin>
-   <groupId>org.eclipse.tycho</groupId>
-   <artifactId>target-platform-configuration</artifactId>
-   <version>1.7.0</version>
-   <configuration>
-      <dependency-resolution>
-         <extraRequirements>
-            <requirement>
-               <type>eclipse-plugin</type>
-               <id>org.talend.mdm.repository.test</id>
-               <versionRange>0.0.0</versionRange>
-            </requirement>
-         </extraRequirements>
-      </dependency-resolution>
-   </configuration>
-</plugin>
-</plugins>
-</build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.6</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/lib</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>${basedir}/../org.talend.repository.test/META-INF/libs</directory>
+					<includes> 
+						<include>xstream-1.4.17.jar</include> 
+					</includes>
+                  <filtering>false</filtering>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
