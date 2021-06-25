@@ -45,7 +45,6 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.eclipse.core.runtime.IPlatformRunnable;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
@@ -117,7 +116,7 @@ import org.w3c.dom.Node;
  * allows you to pass in your own annotations.
  * </p>
  */
-public class XSDGenerateHTML implements IPlatformRunnable {
+public class XSDGenerateHTML {
 
     private static Log log = LogFactory.getLog(XSDGenerateHTML.class);
     {
@@ -533,7 +532,6 @@ public class XSDGenerateHTML implements IPlatformRunnable {
      * @param object an array of Strings.
      * @return <code>0</code> indicating success, or <code>1</code> indicating failure.
      */
-    @Override
     public Object run(Object object) {
         try {
             String[] arguments = (String[]) object;
