@@ -431,7 +431,7 @@ public class Util {
                 // // dynamic set endpointAddress
                 // context.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, endpointAddress);
 
-                context.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
+                context.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url.toString());
                 
                 // authentication
                 context.put(BindingProvider.USERNAME_PROPERTY, username);
