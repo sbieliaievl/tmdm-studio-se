@@ -118,11 +118,6 @@ public class MDMServiceConfigrationMainPage extends ServiceConfigrationMainPage 
     }
 
     @Override
-    protected void doSaveSVNChanges() {
-
-    }
-
-    @Override
     protected String getContentsCheckResult() {
 
         if (serviceNameCombo.getText().trim().length() == 0) {
