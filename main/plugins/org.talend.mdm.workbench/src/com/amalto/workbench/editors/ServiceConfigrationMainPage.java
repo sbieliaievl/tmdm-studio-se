@@ -44,7 +44,6 @@ import org.eclipse.ui.forms.editor.FormEditor;
 import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import com.amalto.workbench.dialogs.PluginDetailsDialog;
-import com.amalto.workbench.exadapter.ExAdapterManager;
 import com.amalto.workbench.i18n.Messages;
 import com.amalto.workbench.image.EImage;
 import com.amalto.workbench.image.ImageCache;
@@ -87,11 +86,8 @@ public class ServiceConfigrationMainPage extends AMainPageV2 {
 
     protected static final String CHECKMSG_ERRORCONN = Messages.ServiceConfigrationMainPage_2;
 
-    private IServiceConfigrationMainPageExAdapter exAdapter;
-
     public ServiceConfigrationMainPage(FormEditor editor) {
         super(editor, ServiceConfigrationMainPage.class.getName(), ((XObjectEditorInput) editor.getEditorInput()).getName());
-        this.exAdapter = ExAdapterManager.getAdapter(this, IServiceConfigrationMainPageExAdapter.class);
     }
 
     protected void setForConfigureContent(String serviceName) {
