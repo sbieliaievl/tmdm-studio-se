@@ -284,19 +284,12 @@ public class ServiceConfigrationMainPage extends AMainPageV2 {
         return doc;
     }
 
-    protected void doSaveSVNChanges() {
-        if (exAdapter != null) {
-            exAdapter.doSaveSVNChange(service, ws, serviceNameCombo.getText(), serviceConfigurationsText.getText());
-        }
-
-    }
 
     protected void saveChanges() {
         ws.setJndiName(serviceNameCombo.getText().contains("/") ? serviceNameCombo.getText() : "amalto/local/service/"//$NON-NLS-1$//$NON-NLS-2$
                 + serviceNameCombo.getText());
         ws.setConfiguration(serviceConfigurationsText.getText());
 
-        doSaveSVNChanges();
     }
 
     @Override

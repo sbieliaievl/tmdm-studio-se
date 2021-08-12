@@ -35,7 +35,6 @@ import org.eclipse.ui.intro.config.IIntroAction;
 import org.eclipse.ui.progress.UIJob;
 import org.talend.commons.exception.PersistenceException;
 import org.talend.commons.runtime.model.repository.ERepositoryStatus;
-import org.talend.core.GlobalServiceRegister;
 import org.talend.core.model.properties.Item;
 import org.talend.core.model.repository.IRepositoryViewObject;
 import org.talend.core.runtime.CoreRuntimePlugin;
@@ -44,7 +43,6 @@ import org.talend.mdm.repository.core.IRepositoryNodeActionProvider;
 import org.talend.mdm.repository.core.IRepositoryNodeConfiguration;
 import org.talend.mdm.repository.core.IRepositoryViewGlobalActionHandler;
 import org.talend.mdm.repository.core.IServerObjectRepositoryType;
-import org.talend.mdm.repository.core.service.IMDMSVNProviderService;
 import org.talend.mdm.repository.extension.RepositoryNodeConfigurationManager;
 import org.talend.mdm.repository.i18n.Messages;
 import org.talend.mdm.repository.model.mdmmetadata.MDMServerDef;
@@ -127,24 +125,6 @@ public class OpenObjectAction extends AbstractRepositoryAction implements IIntro
 
     private void updateEditorInputVersionInfo(IRepositoryViewEditorInput editorInput, IRepositoryViewObject viewObject) {
         String version = viewObject.getVersion();
-        try {
-            if (!factory.isLocalConnectionProvider()) {
-                if (GlobalServiceRegister.getDefault().isServiceRegistered(IMDMSVNProviderService.class)) {
-                    IMDMSVNProviderService service = GlobalServiceRegister.getDefault()
-                            .getService(IMDMSVNProviderService.class);
-                    if (service != null && service.isProjectInSvnMode()) {
-                        String revisionNumStr = service.getCurrentSVNRevision(viewObject);
-                        if (revisionNumStr != null) {
-                            revisionNumStr = ".r" + revisionNumStr; //$NON-NLS-1$
-                            version += revisionNumStr;
-                        }
-                    }
-                }
-            }
-        } catch (PersistenceException e) {
-            LOG.error(e.getMessage(), e);
-        }
-
         editorInput.setVersion(version);
     }
 
