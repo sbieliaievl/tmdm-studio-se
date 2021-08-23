@@ -116,6 +116,11 @@ public class MDMServiceConfigrationMainPage extends ServiceConfigrationMainPage 
             serviceNameCombo.add(item);
         }
     }
+    
+    @Override
+    protected void doSaveSVNChanges() {
+
+    }
 
     @Override
     protected String getContentsCheckResult() {
