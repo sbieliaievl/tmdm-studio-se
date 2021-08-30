@@ -40,7 +40,6 @@ import org.talend.core.runtime.CoreRuntimePlugin;
 import org.talend.core.services.IGITProviderService;
 import org.talend.mdm.repository.core.IRepositoryNodeConfiguration;
 import org.talend.mdm.repository.core.IRepositoryNodeLabelProvider;
-import org.talend.mdm.repository.core.service.IMDMSVNProviderService;
 import org.talend.mdm.repository.extension.RepositoryNodeConfigurationManager;
 import org.talend.mdm.repository.i18n.Messages;
 import org.talend.mdm.repository.utils.RepositoryResourceUtil;
@@ -56,10 +55,6 @@ public class MDMRepositoryLabelProvider extends ColumnLabelProvider implements I
     private static Logger log = Logger.getLogger(MDMRepositoryLabelProvider.class);
 
     private IProxyRepositoryFactory factory = CoreRuntimePlugin.getInstance().getProxyRepositoryFactory();
-
-    private IMDMSVNProviderService svnProviderService = null;
-
-    private Boolean isInSvnMode = null;
 
     private IGITProviderService gitProviderService;
 
@@ -150,15 +145,6 @@ public class MDMRepositoryLabelProvider extends ColumnLabelProvider implements I
 
     @Override
     public String getToolTipText(Object element) {
-        if (isInSvnMode()) {
-            IRepositoryViewObject viewObj = (IRepositoryViewObject) element;
-
-            if (getSvnProviderService() != null) {
-                String toolTip = getSvnProviderService().getLockInfo(viewObj);
-                return toolTip;
-            }
-        }
-
         if (isInGitMode()) {
             return getLockInfo(element);
         }
@@ -190,21 +176,6 @@ public class MDMRepositoryLabelProvider extends ColumnLabelProvider implements I
         return null;
     }
 
-    private boolean isInSvnMode() {
-        if (isInSvnMode == null) {
-            IMDMSVNProviderService service = getSvnProviderService();
-            if (service != null && service.isProjectInSvnMode()) {
-                isInSvnMode = Boolean.TRUE;
-            }
-
-            if (isInSvnMode == null) {
-                isInSvnMode = Boolean.FALSE;
-            }
-        }
-
-        return isInSvnMode.booleanValue();
-    }
-
     private boolean isInGitMode() {
         if (isInGitMode == null) {
             IGITProviderService service = getGitProviderService();
@@ -218,21 +189,6 @@ public class MDMRepositoryLabelProvider extends ColumnLabelProvider implements I
         }
 
         return isInGitMode.booleanValue();
-    }
-
-    private IMDMSVNProviderService getSvnProviderService() {
-        if (svnProviderService == null) {
-            try {
-                if (GlobalServiceRegister.getDefault().isServiceRegistered(IMDMSVNProviderService.class)) {
-                    svnProviderService = (IMDMSVNProviderService) GlobalServiceRegister.getDefault()
-                            .getService(IMDMSVNProviderService.class);
-                }
-            } catch (Exception e) {
-                log.error(e.getMessage(), e);
-            }
-        }
-
-        return svnProviderService;
     }
 
     private IGITProviderService getGitProviderService() {

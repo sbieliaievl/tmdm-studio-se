@@ -21,24 +21,19 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
-import org.talend.commons.exception.PersistenceException;
 import org.talend.commons.runtime.model.repository.ERepositoryStatus;
 import org.talend.commons.utils.VersionUtils;
-import org.talend.core.GlobalServiceRegister;
 import org.talend.core.model.properties.Item;
 import org.talend.core.model.repository.IRepositoryViewObject;
-import org.talend.core.runtime.CoreRuntimePlugin;
 import org.talend.designer.core.ui.wizards.OpenExistVersionProcessWizard;
 import org.talend.mdm.repository.core.IRepositoryNodeActionProvider;
 import org.talend.mdm.repository.core.IRepositoryNodeConfiguration;
-import org.talend.mdm.repository.core.service.IMDMSVNProviderService;
 import org.talend.mdm.repository.extension.RepositoryNodeConfigurationManager;
 import org.talend.mdm.repository.i18n.Messages;
 import org.talend.mdm.repository.ui.actions.IPostOpenAction;
 import org.talend.mdm.repository.ui.editors.IRepositoryViewEditorInput;
 import org.talend.mdm.repository.ui.navigator.MDMRepositoryView;
 import org.talend.mdm.repository.utils.RepositoryResourceUtil;
-import org.talend.repository.model.IProxyRepositoryFactory;
 import org.talend.repository.model.IRepositoryNode;
 import org.talend.repository.model.RepositoryNode;
 
@@ -121,26 +116,6 @@ public class MDMOpenExistVersionProcessWizard extends OpenExistVersionProcessWiz
 
     private void updateEditorInputVersionInfo(IRepositoryViewEditorInput editorInput, IRepositoryViewObject viewObj) {
         String version = viewObj.getVersion();
-        try {
-            IProxyRepositoryFactory factory = CoreRuntimePlugin.getInstance().getProxyRepositoryFactory();
-            if (!factory.isLocalConnectionProvider()) {
-                IMDMSVNProviderService service = GlobalServiceRegister.getDefault().getService(
-                        IMDMSVNProviderService.class);
-                if (service != null) {
-                    if (service.isProjectInSvnMode()) {
-                        String revisionNumStr = service.getCurrentSVNRevision(viewObj);
-                        if (revisionNumStr != null) {
-                            revisionNumStr = ".r" + revisionNumStr; //$NON-NLS-1$
-                            version += revisionNumStr;
-                        }
-                    }
-                }
-
-            }
-        } catch (PersistenceException e) {
-            log.error(e.getMessage(), e);
-        }
-
         editorInput.setVersion(version);
     }
 
