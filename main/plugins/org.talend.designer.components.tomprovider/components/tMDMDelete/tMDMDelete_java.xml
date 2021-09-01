@@ -331,6 +331,7 @@
                     MODULE="istack-commons-runtime-3.0.11.jar"
                     MVN="mvn:com.sun.istack/istack-commons-runtime/3.0.11"
                     REQUIRED="true"
+                    UrlPath="platform:/plugin/org.talend.libraries.apache.cxf/lib/istack-commons-runtime-3.0.11.jar"
                     BundleID=""
                     />
                 <IMPORT
