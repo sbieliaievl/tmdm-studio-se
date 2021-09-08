@@ -40,7 +40,7 @@ public class CopyUrlAction extends AbstractRepositoryAction {
 
     @Override
     public String getGroupName() {
-        return GROUP_SVN;
+        return GROUP_GIT;
     }
 
     @Override
