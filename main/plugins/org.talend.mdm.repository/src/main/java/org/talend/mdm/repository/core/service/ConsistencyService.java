@@ -26,6 +26,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
@@ -73,7 +74,6 @@ import org.talend.mdm.repository.ui.dialogs.consistency.ConfirmConflictMessageDi
 import org.talend.mdm.repository.ui.dialogs.consistency.ConsistencyConflictDialog;
 import org.talend.mdm.repository.ui.preferences.PreferenceConstants;
 import org.talend.mdm.repository.ui.wizards.imports.IConsistencyServiceExAdapter;
-import org.talend.mdm.repository.utils.DigestUtil;
 import org.talend.mdm.repository.utils.RepositoryResourceUtil;
 import org.talend.mdm.repository.utils.UIUtil;
 
@@ -265,7 +265,7 @@ public class ConsistencyService {
         try {
             os = new ByteArrayOutputStream();
             resource.save(os, Collections.EMPTY_MAP);
-            String digestValue = DigestUtil.encodeByMD5(os.toByteArray());
+            String digestValue = DigestUtils.sha256Hex(os.toByteArray());
             return digestValue;
         } catch (IOException e) {
             log.error(e.getMessage(), e);
@@ -392,7 +392,7 @@ public class ConsistencyService {
                     out.write(buffer, 0, len);
                 }
                 //
-                String digestValue = DigestUtil.encodeByMD5(out.toByteArray());
+                String digestValue = DigestUtils.sha256Hex(out.toByteArray());
                 return digestValue;
             } catch (CoreException e) {
                 log.error(e.getMessage(), e);
