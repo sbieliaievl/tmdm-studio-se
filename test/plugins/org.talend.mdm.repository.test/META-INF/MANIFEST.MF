@@ -4,11 +4,8 @@ Bundle-Name: org.talend.mdm.repository.test
 Bundle-SymbolicName: org.talend.mdm.repository.test
 Bundle-Version: 8.0.1.qualifier
 Fragment-Host: org.talend.mdm.repository
-Require-Bundle: org.talend.testutils,
- org.hamcrest,
- org.eclipse.osgi.services,
- org.apache.commons.lang,
- org.apache.ant
+Import-Package: org.apache.tools.tar
+Require-Bundle: org.talend.testutils
 Bundle-ClassPath: .,
  META-INF/libs/xstream-1.4.18.jar
 Export-Package: org.talend.mdm.repository.ui.actions,
