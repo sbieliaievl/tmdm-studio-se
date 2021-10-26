@@ -316,6 +316,10 @@ public class ModelImpactAnalyseService {
             xstream.addImplicitCollection(Result.class, "severities"); //$NON-NLS-1$
             xstream.addImplicitCollection(Severity.class, "changes"); //$NON-NLS-1$
             xstream.addImplicitCollection(EntitiesToDrop.class, "entities"); //$NON-NLS-1$
+            Class<?>[] classes = new Class[] { Result.class, Change.class, SeverityMedium.class, SeverityLow.class,
+                    SeverityHigh.class, EntitiesToDrop.class, String.class };
+            XStream.setupDefaultSecurity(xstream);
+            xstream.allowTypes(classes);
         }
         return xstream;
     }
