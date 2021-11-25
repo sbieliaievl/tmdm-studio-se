@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.gmf.runtime.notation.NotationPackage;
+import org.talend.core.model.metadata.builder.connection.ConnectionPackage;
 import org.talend.dataquality.analysis.AnalysisPackage;
 import org.talend.dataquality.domain.DomainPackage;
 import org.talend.dataquality.expressions.ExpressionsPackage;
@@ -19,6 +21,10 @@ import org.talend.dataquality.indicators.IndicatorsPackage;
 import org.talend.dataquality.properties.PropertiesPackage;
 import org.talend.dataquality.reports.ReportsPackage;
 import org.talend.dataquality.rules.RulesPackage;
+import org.talend.designer.business.model.business.BusinessPackage;
+import org.talend.designer.core.model.utils.emf.component.ComponentPackage;
+import org.talend.designer.core.model.utils.emf.talendfile.TalendFilePackage;
+import org.talend.designer.joblet.model.JobletPackage;
 import org.talend.mdm.repository.model.mdmmetadata.MdmmetadataPackage;
 import org.talend.mdm.repository.model.mdmserverobject.MDMServerObject;
 import org.talend.mdm.repository.model.mdmserverobject.MdmserverobjectFactory;
@@ -57,6 +63,36 @@ import org.talend.mdm.repository.model.mdmserverobject.WSWorkflowDeployE;
 import org.talend.mdm.repository.model.mdmserverobject.WSWorkflowE;
 import org.talend.mdm.repository.model.mdmserverobject.matchrule.MatchRulePackage;
 import org.talend.mdm.repository.model.mdmserverobject.matchrule.impl.MatchRulePackageImpl;
+import orgomg.cwm.analysis.businessnomenclature.BusinessnomenclaturePackage;
+import orgomg.cwm.analysis.datamining.DataminingPackage;
+import orgomg.cwm.analysis.informationvisualization.InformationvisualizationPackage;
+import orgomg.cwm.analysis.olap.OlapPackage;
+import orgomg.cwm.analysis.transformation.TransformationPackage;
+import orgomg.cwm.foundation.businessinformation.BusinessinformationPackage;
+import orgomg.cwm.foundation.datatypes.DatatypesPackage;
+import orgomg.cwm.foundation.keysindexes.KeysindexesPackage;
+import orgomg.cwm.foundation.softwaredeployment.SoftwaredeploymentPackage;
+import orgomg.cwm.foundation.typemapping.TypemappingPackage;
+import orgomg.cwm.management.warehouseoperation.WarehouseoperationPackage;
+import orgomg.cwm.management.warehouseprocess.WarehouseprocessPackage;
+import orgomg.cwm.objectmodel.behavioral.BehavioralPackage;
+import orgomg.cwm.objectmodel.core.CorePackage;
+import orgomg.cwm.objectmodel.instance.InstancePackage;
+import orgomg.cwm.objectmodel.relationships.RelationshipsPackage;
+import orgomg.cwm.resource.multidimensional.MultidimensionalPackage;
+import orgomg.cwm.resource.record.RecordPackage;
+import orgomg.cwm.resource.relational.RelationalPackage;
+import orgomg.cwm.resource.xml.XmlPackage;
+import orgomg.cwmmip.CwmmipPackage;
+import orgomg.cwmx.analysis.informationreporting.InformationreportingPackage;
+import orgomg.cwmx.analysis.informationset.InformationsetPackage;
+import orgomg.cwmx.foundation.er.ErPackage;
+import orgomg.cwmx.resource.coboldata.CoboldataPackage;
+import orgomg.cwmx.resource.dmsii.DmsiiPackage;
+import orgomg.cwmx.resource.essbase.EssbasePackage;
+import orgomg.cwmx.resource.express.ExpressPackage;
+import orgomg.cwmx.resource.imsdatabase.ImsdatabasePackage;
+import orgomg.mof.model.ModelPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -324,7 +360,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
 
     /**
      * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-     * 
+     *
      * <p>This method is used to initialize {@link MdmserverobjectPackage#eINSTANCE} when that field is accessed.
      * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
      * <!-- begin-user-doc -->
@@ -335,16 +371,48 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
      * @generated
      */
     public static MdmserverobjectPackage init() {
-        if (isInited) {
-            return (MdmserverobjectPackage)EPackage.Registry.INSTANCE.getEPackage(MdmserverobjectPackage.eNS_URI);
-        }
+        if (isInited) return (MdmserverobjectPackage)EPackage.Registry.INSTANCE.getEPackage(MdmserverobjectPackage.eNS_URI);
 
         // Obtain or create and register package
-        MdmserverobjectPackageImpl theMdmserverobjectPackage = (MdmserverobjectPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof MdmserverobjectPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new MdmserverobjectPackageImpl());
+        Object registeredMdmserverobjectPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+        MdmserverobjectPackageImpl theMdmserverobjectPackage = registeredMdmserverobjectPackage instanceof MdmserverobjectPackageImpl ? (MdmserverobjectPackageImpl)registeredMdmserverobjectPackage : new MdmserverobjectPackageImpl();
 
         isInited = true;
 
         // Initialize simple dependencies
+        BusinessPackage.eINSTANCE.eClass();
+        ComponentPackage.eINSTANCE.eClass();
+        CorePackage.eINSTANCE.eClass();
+        BehavioralPackage.eINSTANCE.eClass();
+        RelationshipsPackage.eINSTANCE.eClass();
+        InstancePackage.eINSTANCE.eClass();
+        BusinessinformationPackage.eINSTANCE.eClass();
+        DatatypesPackage.eINSTANCE.eClass();
+        orgomg.cwm.foundation.expressions.ExpressionsPackage.eINSTANCE.eClass();
+        KeysindexesPackage.eINSTANCE.eClass();
+        SoftwaredeploymentPackage.eINSTANCE.eClass();
+        TypemappingPackage.eINSTANCE.eClass();
+        RelationalPackage.eINSTANCE.eClass();
+        RecordPackage.eINSTANCE.eClass();
+        MultidimensionalPackage.eINSTANCE.eClass();
+        XmlPackage.eINSTANCE.eClass();
+        TransformationPackage.eINSTANCE.eClass();
+        OlapPackage.eINSTANCE.eClass();
+        DataminingPackage.eINSTANCE.eClass();
+        InformationvisualizationPackage.eINSTANCE.eClass();
+        BusinessnomenclaturePackage.eINSTANCE.eClass();
+        WarehouseprocessPackage.eINSTANCE.eClass();
+        WarehouseoperationPackage.eINSTANCE.eClass();
+        ErPackage.eINSTANCE.eClass();
+        CoboldataPackage.eINSTANCE.eClass();
+        DmsiiPackage.eINSTANCE.eClass();
+        ImsdatabasePackage.eINSTANCE.eClass();
+        EssbasePackage.eINSTANCE.eClass();
+        ExpressPackage.eINSTANCE.eClass();
+        InformationsetPackage.eINSTANCE.eClass();
+        InformationreportingPackage.eINSTANCE.eClass();
+        CwmmipPackage.eINSTANCE.eClass();
+        ModelPackage.eINSTANCE.eClass();
         AnalysisPackage.eINSTANCE.eClass();
         ReportsPackage.eINSTANCE.eClass();
         IndicatorsPackage.eINSTANCE.eClass();
@@ -352,10 +420,17 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
         DomainPackage.eINSTANCE.eClass();
         RulesPackage.eINSTANCE.eClass();
         PropertiesPackage.eINSTANCE.eClass();
+        EcorePackage.eINSTANCE.eClass();
+        JobletPackage.eINSTANCE.eClass();
         MdmmetadataPackage.eINSTANCE.eClass();
+        ConnectionPackage.eINSTANCE.eClass();
+        NotationPackage.eINSTANCE.eClass();
+        org.talend.core.model.properties.PropertiesPackage.eINSTANCE.eClass();
+        TalendFilePackage.eINSTANCE.eClass();
 
         // Obtain or create and register interdependencies
-        MatchRulePackageImpl theMatchRulePackage = (MatchRulePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MatchRulePackage.eNS_URI) instanceof MatchRulePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MatchRulePackage.eNS_URI) : MatchRulePackage.eINSTANCE);
+        Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(MatchRulePackage.eNS_URI);
+        MatchRulePackageImpl theMatchRulePackage = (MatchRulePackageImpl)(registeredPackage instanceof MatchRulePackageImpl ? registeredPackage : MatchRulePackage.eINSTANCE);
 
         // Create package meta-data objects
         theMdmserverobjectPackage.createPackageContents();
@@ -368,7 +443,6 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
         // Mark meta-data to indicate it can't be changed
         theMdmserverobjectPackage.freeze();
 
-  
         // Update the registry and return the package
         EPackage.Registry.INSTANCE.put(MdmserverobjectPackage.eNS_URI, theMdmserverobjectPackage);
         return theMdmserverobjectPackage;
@@ -769,6 +843,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getWSViewE_SortField() {
         return (EAttribute)wsViewEEClass.getEStructuralFeatures().get(6);
     }
@@ -778,6 +853,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EReference getWSViewE_IsAsc() {
         return (EReference)wsViewEEClass.getEStructuralFeatures().get(7);
     }
@@ -787,6 +863,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public EAttribute getWSViewE_CustomForm() {
         return (EAttribute)wsViewEEClass.getEStructuralFeatures().get(8);
     }
@@ -1019,6 +1096,16 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
     @Override
     public EReference getWSTransformerV2E_ProcessSteps() {
         return (EReference)wsTransformerV2EEClass.getEStructuralFeatures().get(0);
+    }
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    @Override
+    public EAttribute getWSTransformerV2E_WithAdminPermissions() {
+        return (EAttribute)wsTransformerV2EEClass.getEStructuralFeatures().get(1);
     }
 
     /**
@@ -1616,9 +1703,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
      * @generated
      */
     public void createPackageContents() {
-        if (isCreated) {
-            return;
-        }
+        if (isCreated) return;
         isCreated = true;
 
         // Create classes and their features
@@ -1703,6 +1788,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
 
         wsTransformerV2EEClass = createEClass(WS_TRANSFORMER_V2E);
         createEReference(wsTransformerV2EEClass, WS_TRANSFORMER_V2E__PROCESS_STEPS);
+        createEAttribute(wsTransformerV2EEClass, WS_TRANSFORMER_V2E__WITH_ADMIN_PERMISSIONS);
 
         wsTransformerProcessStepEEClass = createEClass(WS_TRANSFORMER_PROCESS_STEP_E);
         createEAttribute(wsTransformerProcessStepEEClass, WS_TRANSFORMER_PROCESS_STEP_E__PLUGIN_JNDI);
@@ -1793,9 +1879,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
      * @generated
      */
     public void initializePackageContents() {
-        if (isInitialized) {
-            return;
-        }
+        if (isInitialized) return;
         isInitialized = true;
 
         // Initialize package
@@ -1917,6 +2001,7 @@ public class MdmserverobjectPackageImpl extends EPackageImpl implements Mdmserve
 
         initEClass(wsTransformerV2EEClass, WSTransformerV2E.class, "WSTransformerV2E", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEReference(getWSTransformerV2E_ProcessSteps(), this.getWSTransformerProcessStepE(), null, "processSteps", null, 0, -1, WSTransformerV2E.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+        initEAttribute(getWSTransformerV2E_WithAdminPermissions(), ecorePackage.getEBoolean(), "withAdminPermissions", "false", 0, 1, WSTransformerV2E.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
         initEClass(wsTransformerProcessStepEEClass, WSTransformerProcessStepE.class, "WSTransformerProcessStepE", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
         initEAttribute(getWSTransformerProcessStepE_PluginJNDI(), ecorePackage.getEString(), "pluginJNDI", null, 0, 1, WSTransformerProcessStepE.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -67,6 +67,8 @@ public class Messages extends NLS {
     public static String TransformerMainPage_ConfirmContent;
 
     public static String TransformerMainPage_ConfirmContent1;
+    
+    public static String TransformerMainPage2_runWithAdminPermissions;
 
     public static String Warning;
 

@@ -103,6 +103,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MDMServerObject createMDMServerObject() {
         MDMServerObjectImpl mdmServerObject = new MDMServerObjectImpl();
         return mdmServerObject;
@@ -113,6 +114,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSMenuE createWSMenuE() {
         WSMenuEImpl wsMenuE = new WSMenuEImpl();
         return wsMenuE;
@@ -123,6 +125,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSMenuEntryE createWSMenuEntryE() {
         WSMenuEntryEImpl wsMenuEntryE = new WSMenuEntryEImpl();
         return wsMenuEntryE;
@@ -133,6 +136,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSMenuMenuEntriesDescriptionsE createWSMenuMenuEntriesDescriptionsE() {
         WSMenuMenuEntriesDescriptionsEImpl wsMenuMenuEntriesDescriptionsE = new WSMenuMenuEntriesDescriptionsEImpl();
         return wsMenuMenuEntriesDescriptionsE;
@@ -143,6 +147,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSRoleE createWSRoleE() {
         WSRoleEImpl wsRoleE = new WSRoleEImpl();
         return wsRoleE;
@@ -153,6 +158,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSRoleSpecificationE createWSRoleSpecificationE() {
         WSRoleSpecificationEImpl wsRoleSpecificationE = new WSRoleSpecificationEImpl();
         return wsRoleSpecificationE;
@@ -163,6 +169,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSRoleSpecificationInstanceE createWSRoleSpecificationInstanceE() {
         WSRoleSpecificationInstanceEImpl wsRoleSpecificationInstanceE = new WSRoleSpecificationInstanceEImpl();
         return wsRoleSpecificationInstanceE;
@@ -173,6 +180,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSViewE createWSViewE() {
         WSViewEImpl wsViewE = new WSViewEImpl();
         return wsViewE;
@@ -183,6 +191,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSWhereConditionE createWSWhereConditionE() {
         WSWhereConditionEImpl wsWhereConditionE = new WSWhereConditionEImpl();
         return wsWhereConditionE;
@@ -193,6 +202,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSWhereOperatorE createWSWhereOperatorE() {
         WSWhereOperatorEImpl wsWhereOperatorE = new WSWhereOperatorEImpl();
         return wsWhereOperatorE;
@@ -203,6 +213,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSStringPredicateE createWSStringPredicateE() {
         WSStringPredicateEImpl wsStringPredicateE = new WSStringPredicateEImpl();
         return wsStringPredicateE;
@@ -213,6 +224,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSDataModelE createWSDataModelE() {
         WSDataModelEImpl wsDataModelE = new WSDataModelEImpl();
         return wsDataModelE;
@@ -223,6 +235,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSDataClusterE createWSDataClusterE() {
         WSDataClusterEImpl wsDataClusterE = new WSDataClusterEImpl();
         return wsDataClusterE;
@@ -233,6 +246,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSStoredProcedureE createWSStoredProcedureE() {
         WSStoredProcedureEImpl wsStoredProcedureE = new WSStoredProcedureEImpl();
         return wsStoredProcedureE;
@@ -243,6 +257,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSBooleanE createWSBooleanE() {
         WSBooleanEImpl wsBooleanE = new WSBooleanEImpl();
         return wsBooleanE;
@@ -253,6 +268,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSWorkflowDeployE createWSWorkflowDeployE() {
         WSWorkflowDeployEImpl wsWorkflowDeployE = new WSWorkflowDeployEImpl();
         return wsWorkflowDeployE;
@@ -263,6 +279,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSTransformerV2E createWSTransformerV2E() {
         WSTransformerV2EImpl wsTransformerV2E = new WSTransformerV2EImpl();
         return wsTransformerV2E;
@@ -273,6 +290,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSTransformerProcessStepE createWSTransformerProcessStepE() {
         WSTransformerProcessStepEImpl wsTransformerProcessStepE = new WSTransformerProcessStepEImpl();
         return wsTransformerProcessStepE;
@@ -283,6 +301,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSTransformerVariablesMappingE createWSTransformerVariablesMappingE() {
         WSTransformerVariablesMappingEImpl wsTransformerVariablesMappingE = new WSTransformerVariablesMappingEImpl();
         return wsTransformerVariablesMappingE;
@@ -293,6 +312,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSTypedContentE createWSTypedContentE() {
         WSTypedContentEImpl wsTypedContentE = new WSTypedContentEImpl();
         return wsTypedContentE;
@@ -303,6 +323,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSByteArrayE createWSByteArrayE() {
         WSByteArrayEImpl wsByteArrayE = new WSByteArrayEImpl();
         return wsByteArrayE;
@@ -313,6 +334,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSRoutingRuleE createWSRoutingRuleE() {
         WSRoutingRuleEImpl wsRoutingRuleE = new WSRoutingRuleEImpl();
         return wsRoutingRuleE;
@@ -323,6 +345,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSRoutingRuleExpressionE createWSRoutingRuleExpressionE() {
         WSRoutingRuleExpressionEImpl wsRoutingRuleExpressionE = new WSRoutingRuleExpressionEImpl();
         return wsRoutingRuleExpressionE;
@@ -333,6 +356,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSRoutingRuleOperatorE createWSRoutingRuleOperatorE() {
         WSRoutingRuleOperatorEImpl wsRoutingRuleOperatorE = new WSRoutingRuleOperatorEImpl();
         return wsRoutingRuleOperatorE;
@@ -343,6 +367,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSJobModelE createWSJobModelE() {
         WSJobModelEImpl wsJobModelE = new WSJobModelEImpl();
         return wsJobModelE;
@@ -353,6 +378,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSEventManagerE createWSEventManagerE() {
         WSEventManagerEImpl wsEventManagerE = new WSEventManagerEImpl();
         return wsEventManagerE;
@@ -363,6 +389,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSServiceConfigurationE createWSServiceConfigurationE() {
         WSServiceConfigurationEImpl wsServiceConfigurationE = new WSServiceConfigurationEImpl();
         return wsServiceConfigurationE;
@@ -373,6 +400,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSServicePutConfigurationE createWSServicePutConfigurationE() {
         WSServicePutConfigurationEImpl wsServicePutConfigurationE = new WSServicePutConfigurationEImpl();
         return wsServicePutConfigurationE;
@@ -383,6 +411,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSWorkflowE createWSWorkflowE() {
         WSWorkflowEImpl wsWorkflowE = new WSWorkflowEImpl();
         return wsWorkflowE;
@@ -393,6 +422,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSResourceE createWSResourceE() {
         WSResourceEImpl wsResourceE = new WSResourceEImpl();
         return wsResourceE;
@@ -403,6 +433,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSCustomFormE createWSCustomFormE() {
         WSCustomFormEImpl wsCustomFormE = new WSCustomFormEImpl();
         return wsCustomFormE;
@@ -413,6 +444,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSMatchRuleE createWSMatchRuleE() {
         WSMatchRuleEImpl wsMatchRuleE = new WSMatchRuleEImpl();
         return wsMatchRuleE;
@@ -423,6 +455,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public WSMatchRulePKE createWSMatchRulePKE() {
         WSMatchRulePKEImpl wsMatchRulePKE = new WSMatchRulePKEImpl();
         return wsMatchRulePKE;
@@ -433,6 +466,7 @@ public class MdmserverobjectFactoryImpl extends EFactoryImpl implements Mdmserve
      * <!-- end-user-doc -->
      * @generated
      */
+    @Override
     public MdmserverobjectPackage getMdmserverobjectPackage() {
         return (MdmserverobjectPackage)getEPackage();
     }

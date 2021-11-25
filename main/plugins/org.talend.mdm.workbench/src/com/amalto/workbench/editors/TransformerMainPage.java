@@ -440,6 +440,8 @@ public class TransformerMainPage extends AMainPageV2 {
             windowTarget.setTransfer(new Transfer[] { TextTransfer.getInstance() });
             windowTarget.addDropListener(new DCDropTargetListener());
 
+            createOtherContent(toolkit, topComposite);
+            
             sequenceGroup = this.getNewSectionComposite(Messages.TransformerMainPage_StepsSequence);
             sequenceGroup.setLayout(new GridLayout(1, false));
 
@@ -697,6 +699,9 @@ public class TransformerMainPage extends AMainPageV2 {
 
     }
 
+    protected void createOtherContent(final FormToolkit toolkit, Composite topComposite) {// empty
+    }
+    
     private void addToolBarItem() {
         XObjectEditor editor = (XObjectEditor) getEditor();
         editor.getToolBar().addActions(new TestProcessAction());
