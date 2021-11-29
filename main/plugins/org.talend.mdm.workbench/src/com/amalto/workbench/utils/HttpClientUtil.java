@@ -267,24 +267,6 @@ public class HttpClientUtil {
         return request;
     }
 
-    public static byte[] getResourceFile(String uri, String userName, String password) throws XtentisException {
-        HttpUriRequest request = new HttpGet(uri);
-        if (userName == null) {
-            userName = "admin"; //$NON-NLS-1$
-        }
-        if (password == null) {
-            password = "talend"; //$NON-NLS-1$
-        }
-        wrapHttpRequest(request, userName, password);
-        addStudioToken(request, userName);
-        DefaultHttpClient client = createClient();
-        byte[] data = getByteArrayStreamContent(client, request, null, "{}"); //$NON-NLS-1$
-        if (null == data) {
-            throw new XtentisException("no response data"); //$NON-NLS-1$
-        }
-        return data;
-    }
-
     private static <T> T wrapResponse(HttpResponse response, String message, Class<T> clz, boolean isReturnServerError)
             throws XtentisException, IllegalStateException, IOException {
 
