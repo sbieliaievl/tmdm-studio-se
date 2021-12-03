@@ -419,6 +419,13 @@ public class Util {
                 // authentication
                 context.put(BindingProvider.USERNAME_PROPERTY, username);
                 context.put(BindingProvider.PASSWORD_PROPERTY, password);
+                
+                //double default connection timeout(30000 milliseconds) and double default received timeout(60000 milliseconds)
+                String ct = System.getProperty("javax.xml.ws.client.connectionTimeout", String.valueOf(30000 * 2));
+                String rt = System.getProperty("javax.xml.ws.client.receiveTimeout", String.valueOf(60000 * 2));
+                
+                context.put("javax.xml.ws.client.connectionTimeout", Integer.valueOf(ct));
+                context.put("javax.xml.ws.client.receiveTimeout", Integer.valueOf(rt));
 
                 IMDMWebServiceHook wsHook = getWebServiceHook();
                 if (wsHook != null) {
