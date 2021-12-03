@@ -181,7 +181,7 @@ public class XSDEditParticleAction extends UndoAction implements SelectionListen
                 if (ref == null) {// remove from entity category annotation if exist
                     List<XSDElementDeclaration> conceptsOfField = XSDUtil.getConceptsOfField(selParticle);
                     for (XSDElementDeclaration concept : conceptsOfField) {
-                        XSDUtil.syncEntityCategoryAnnotation(concept, decl.getName(), null);
+                        XSDUtil.syncEntityCategoryAnnotation(concept, initEleName, null);
                         concept.updateElement();
                     }
                 }
