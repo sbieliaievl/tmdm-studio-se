@@ -7,7 +7,6 @@ Bundle-Version: 8.0.1.qualifier
 Require-Bundle: org.talend.testutils,
  org.hamcrest,
  org.eclipse.osgi.services,
- org.talend.libraries.apache.xml,
- org.talend.mdm.ws.enterprise;resolution:=optional
+ org.talend.libraries.apache.xml
 Bundle-ClassPath: .
 Export-Package: com.amalto.workbench.utils

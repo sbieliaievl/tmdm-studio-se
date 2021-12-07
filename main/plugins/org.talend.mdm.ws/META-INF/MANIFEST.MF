@@ -7,10 +7,11 @@ Bundle-Version: 8.0.1.qualifier
 Require-Bundle: javax.wsdl;bundle-version="1.6.2",
  javax.activation,
  org.eclipse.core.runtime,
- javax.xml.bind,
- javax.xml.ws,
- javax.jws;bundle-version="2.0.0"
+ javax.xml.bind
 Eclipse-ExtensibleAPI: true
+Bundle-ClassPath: .,
+ lib/javax.jws_2.0.0.v201005080400.jar,
+ lib/javax.xml.ws_2.1.0.v200902101523.jar
 Export-Package: 
  com.amalto.workbench.webservices,
  javax.xml.bind,
