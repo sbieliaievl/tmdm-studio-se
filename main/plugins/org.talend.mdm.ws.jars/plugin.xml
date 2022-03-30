@@ -6,98 +6,98 @@
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-core-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-core/3.3.10" 
+              name="cxf-core-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-core/3.3.11" 
               required="true">
       </libraryNeeded>
       <libraryNeeded
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-rt-bindings-soap-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-core/3.3.10" 
+              name="cxf-rt-bindings-soap-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-core/3.3.11" 
               required="true">
       </libraryNeeded>
       <libraryNeeded
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-rt-bindings-xml-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-bindings-xml/3.3.10" 
+              name="cxf-rt-bindings-xml-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-bindings-xml/3.3.11" 
               required="true">
        </libraryNeeded>
 	   <libraryNeeded
 	          context="plugin:org.talend.mdm.ws.jars"
 	          language="java"
 	          message="Needed for the cxf dependencies"
-	          name="cxf-rt-databinding-jaxb-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-databinding-jaxb/3.3.10" 
+	          name="cxf-rt-databinding-jaxb-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-databinding-jaxb/3.3.11" 
 	          required="true">
 	   </libraryNeeded>
 	   <libraryNeeded
 	          context="plugin:org.talend.mdm.ws.jars"
 	          language="java"
 	          message="Needed for the cxf dependencies"
-	          name="cxf-rt-features-clustering-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-features-clustering/3.3.10" 
+	          name="cxf-rt-features-clustering-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-features-clustering/3.3.11" 
 	          required="true">
 	   </libraryNeeded>
 	   <libraryNeeded
 	          context="plugin:org.talend.mdm.ws.jars"
 	          language="java"
 	          message="Needed for the cxf dependencies"
-	          name="cxf-rt-frontend-jaxws-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-frontend-jaxws/3.3.10" 
+	          name="cxf-rt-frontend-jaxws-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-frontend-jaxws/3.3.11" 
 	          required="true">
 	   </libraryNeeded>
 	   <libraryNeeded
 	          context="plugin:org.talend.mdm.ws.jars"
 	          language="java"
 	          message="Needed for the cxf dependencies"
-	          name="cxf-rt-frontend-simple-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-frontend-simple/3.3.10" 
+	          name="cxf-rt-frontend-simple-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-frontend-simple/3.3.11" 
 	          required="true">
 	   </libraryNeeded>
 	   <libraryNeeded
 	          context="plugin:org.talend.mdm.ws.jars"
 	          language="java"
 	          message="Needed for the cxf dependencies"
-	          name="cxf-rt-security-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-security/3.3.10" 
+	          name="cxf-rt-security-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-security/3.3.11" 
 	          required="true">
 	   </libraryNeeded>
 	   <libraryNeeded
 	          context="plugin:org.talend.mdm.ws.jars"
 	          language="java"
 	          message="Needed for the cxf dependencies"
-	          name="cxf-rt-security-saml-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-security-saml/3.3.10" 
+	          name="cxf-rt-security-saml-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-security-saml/3.3.11" 
 	          required="true">
 	   </libraryNeeded>
 	   <libraryNeeded
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-rt-transports-http-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-transports-http/3.3.10" 
+              name="cxf-rt-transports-http-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-transports-http/3.3.11" 
               required="true">
         </libraryNeeded>
         <libraryNeeded
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-rt-ws-addr-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-ws-addr/3.3.10" 
+              name="cxf-rt-ws-addr-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-ws-addr/3.3.11" 
               required="true">
         </libraryNeeded>
         <libraryNeeded
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-rt-ws-policy-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-ws-policy/3.3.10" 
+              name="cxf-rt-ws-policy-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-ws-policy/3.3.11" 
               required="true">
         </libraryNeeded>
         <libraryNeeded
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-rt-ws-security-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-ws-security/3.3.10" 
+              name="cxf-rt-ws-security-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-ws-security/3.3.11" 
               required="true">
         </libraryNeeded>
         <libraryNeeded
               context="plugin:org.talend.mdm.ws.jars"
               language="java"
               message="Needed for the cxf dependencies"
-              name="cxf-rt-wsdl-3.3.10.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-wsdl/3.3.10" 
+              name="cxf-rt-wsdl-3.3.11.jar" mvn_uri="mvn:org.apache.cxf/cxf-rt-wsdl/3.3.11" 
               required="true">
         </libraryNeeded>
         <libraryNeeded
